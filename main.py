@@ -39,14 +39,14 @@ def check_json():
 
 def search_username():
     usernames = set()
-    print("Enter The Usernames Of The Profiles You Want To Scrape Tweets From!")
+    print("Enter The Usernames Of All The Profiles You Want To Scrape Tweets From!")
     while True:
         print("1. Input Username")
         print("2. Exit Entering Usernames")
         choice = input("Please Enter Your Choice!")
         if choice.isnumeric() and int(choice) in [1, 2]:
-
-            if int(choice) == 1:
+            choice = int(choice)
+            if choice == 1:
                 
                 name = input("Enter The Username")
                 if name in usernames:
@@ -56,7 +56,7 @@ def search_username():
                 usernames.add(name)
                 continue
 
-            elif int(choice) == 2:
+            elif choice == 2:
                 break
 
         print("Please Enter A Valid Choice")
@@ -121,7 +121,7 @@ if __name__ == "__main__":
             generate_json(usernames, hashtag)
             
             generate_flags(check_json())
-            print("A CSV File Has Been Generated With All The Links To The Flagged Tweets!!!")
+            print("A CSV File Has Been Generated With All The Links To The Flagged Tweets!!! Temporary File has been auto-deleted!")
                             
             break
         
