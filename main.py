@@ -121,7 +121,7 @@ if __name__ == "__main__":
             generate_json(usernames, hashtag)
             
             generate_flags(check_json())
-            print("A CSV File Has Been Generated With All The Links To The Flagged Tweets!!!")
+            print("A CSV File Has Been Generated With All The Links To The Flagged Tweets!!! Temporary File has been auto-deleted!")
                             
             break
         
