@@ -38,7 +38,7 @@ def check_json():
     return flagged_tweets
 
 def search_username():
-    usernames = []
+    usernames = set()
     print("Enter The Usernames Of The Profiles You Want To Scrape Tweets From!")
     while True:
         print("1. Input Username")
@@ -53,7 +53,7 @@ def search_username():
                     print("Username Already Entered!")
                     continue
                 
-                usernames.append(name)
+                usernames.add(name)
                 continue
 
             elif int(choice) == 2:
